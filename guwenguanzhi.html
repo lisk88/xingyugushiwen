@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Base URL for all relative links -->
+    <base href="https://xingyugushiwen.pages.dev/">
+
+    <!-- SEO: 页面标题 -->
+    <title>古文观止 - 星雨古诗文</title>
+    
+    <!-- SEO: 页面描述 -->
+    <meta name="description" content="精选《古文观止》经典篇目，包含《郑伯克段于鄢》、《曹刿论战》、《前出师表》等，方便读者在线阅读和学习。">
+    
+    <meta name="keywords" content="古文观止, 古文, 文言文, 左丘明, 司马迁, 星雨古诗文">
+    
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts for elegant typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background-color: #f8f9fa; /* A very light gray background */
+            color: #212529; /* Darker text for better contrast */
+        }
+        h1, h2, h3, h4, .font-serif-sc { 
+            font-family: 'Noto Serif SC', serif; 
+        }
+        .poem-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+            border: 1px solid #e9ecef;
+            background-color: #ffffff;
+        }
+        .poem-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.07);
+            border-color: #6366f1; /* A single, elegant accent color on hover */
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- Header Navigation (Consistent with Homepage) -->
+    <header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-gray-200">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <div class="text-3xl font-bold font-serif-sc text-gray-900">
+            <a href="index.html" title="返回星雨古诗文首页">星雨古诗文</a>
+        </div>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="/poems.html" class="text-gray-600 hover:text-gray-900 transition-colors" title="浏览所有诗文">诗文</a>
+                <a href="/authors.html" class="text-gray-600 hover:text-gray-900 transition-colors" title="查找古代作者">作者</a>
+                <a href="/quotes.html" class="text-gray-600 hover:text-gray-900 transition-colors" title="欣赏经典名句">名句</a>
+                <a href="/topics.html" class="text-gray-600 hover:text-gray-900 transition-colors" title="探索专题合集">专题</a>
+            </div>
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-gray-800 focus:outline-none" aria-label="打开移动菜单">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+            <a href="/poems.html" class="block py-2 text-gray-600 hover:text-gray-900">诗文</a>
+            <a href="/authors.html" class="block py-2 text-gray-600 hover:text-gray-900">作者</a>
+            <a href="/quotes.html" class="block py-2 text-gray-600 hover:text-gray-900">名句</a>
+            <a href="/topics.html" class="block py-2 text-gray-600 hover:text-gray-900">专题</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-12">
+        <!-- Page Header -->
+        <div class="text-center mb-16">
+            <h1 class="text-4xl md:text-5xl font-bold font-serif-sc text-gray-900">古文观止</h1>
+            <p class="text-lg text-gray-600 mt-4 max-w-2xl mx-auto">阅览历代散文精华，探寻中华思想之源流。</p>
+        </div>
+
+        <!-- Guwen Guanzhi Section -->
+        <section id="guwen-guanzhi" class="mb-16">
+            <h2 class="text-3xl font-bold font-serif-sc text-gray-800 mb-8 border-b-2 border-gray-200 pb-3">经典选集</h2>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-5">
+                <a href="/poem/643619.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">郑伯克段于鄢</h4><p class="text-sm text-gray-500 mt-1">左丘明</p></a>
+                <a href="/poem/643629.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">周郑交质</h4><p class="text-sm text-gray-500 mt-1">左丘明</p></a>
+                <a href="/poem/643630.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">石碏谏宠州吁</h4><p class="text-sm text-gray-500 mt-1">左丘明</p></a>
+                <a href="/poem/643631.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">臧僖伯谏观鱼</h4><p class="text-sm text-gray-500 mt-1">左丘明</p></a>
+                <a href="/poem/643632.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">郑庄公戒饬守臣</h4><p class="text-sm text-gray-500 mt-1">左丘明</p></a>
+                <a href="/poem/643633.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">臧哀伯谏纳郜鼎</h4><p class="text-sm text-gray-500 mt-1">左丘明</p></a>
+                <a href="/poem/643634.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">季梁谏追楚师</h4><p class="text-sm text-gray-500 mt-1">左丘明</p></a>
+                <a href="/poem/643635.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">曹刿论战</h4><p class="text-sm text-gray-500 mt-1">左丘明</p></a>
+                <a href="/poem/643636.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">齐桓公伐楚盟屈完</h4><p class="text-sm text-gray-500 mt-1">左丘明</p></a>
+                <a href="/poem/643637.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">宫之奇谏假道</h4><p class="text-sm text-gray-500 mt-1">左丘明</p></a>
+                <a href="/poem/640592.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">齐桓下拜受胙</h4><p class="text-sm text-gray-500 mt-1">左丘明</p></a>
+                <a href="/poem/643641.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">阴饴甥对秦伯</h4><p class="text-sm text-gray-500 mt-1">左丘明</p></a>
+                <a href="/poem/643642.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">子鱼论战</h4><p class="text-sm text-gray-500 mt-1">左丘明</p></a>
+                <a href="/poem/643646.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">寺人披见文公</h4><p class="text-sm text-gray-500 mt-1">左丘明</p></a>
+                <a href="/poem/643647.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">介之推不言禄</h4><p class="text-sm text-gray-500 mt-1">左丘明</p></a>
+                <a href="/poem/643648.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">展喜犒师</h4><p class="text-sm text-gray-500 mt-1">左丘明</p></a>
+                <a href="/poem/643649.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">烛之武退秦师</h4><p class="text-sm text-gray-500 mt-1">左丘明</p></a>
+                <a href="/poem/643650.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">蹇叔哭师</h4><p class="text-sm text-gray-500 mt-1">左丘明</p></a>
+                <a href="/poem/643651.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">郑子家告赵宣子</h4><p class="text-sm text-gray-500 mt-1">左丘明</p></a>
+                <a href="/poem/643652.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">王孙满对楚子</h4><p class="text-sm text-gray-500 mt-1">左丘明</p></a>
+                <a href="/poem/643653.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">齐国佐不辱命</h4><p class="text-sm text-gray-500 mt-1">左丘明</p></a>
+                <a href="/poem/643654.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">楚归晋知罃</h4><p class="text-sm text-gray-500 mt-1">左丘明</p></a>
+                <a href="/poem/643655.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">吕相绝秦</h4><p class="text-sm text-gray-500 mt-1">左丘明</p></a>
+                <a href="/poem/643656.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">驹支不屈于晋</h4><p class="text-sm text-gray-500 mt-1">左丘明</p></a>
+                <a href="/poem/643657.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">祁奚请免叔向</h4><p class="text-sm text-gray-500 mt-1">左丘明</p></a>
+                <a href="/poem/643658.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">子产告范宣子轻币</h4><p class="text-sm text-gray-500 mt-1">左丘明</p></a>
+                <a href="/poem/643659.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">晏子不死君难</h4><p class="text-sm text-gray-500 mt-1">左丘明</p></a>
+                <a href="/poem/643660.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">季札观周乐</h4><p class="text-sm text-gray-500 mt-1">左丘明</p></a>
+                <a href="/poem/643661.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">子产坏晋馆垣</h4><p class="text-sm text-gray-500 mt-1">左丘明</p></a>
+                <a href="/poem/643662.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">子产论尹何为邑</h4><p class="text-sm text-gray-500 mt-1">左丘明</p></a>
+                <a href="/poem/643663.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">子产却楚逆女以兵</h4><p class="text-sm text-gray-500 mt-1">左丘明</p></a>
+                <a href="/poem/643664.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">子革对灵王</h4><p class="text-sm text-gray-500 mt-1">左丘明</p></a>
+                <a href="/poem/643665.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">子产论政宽猛</h4><p class="text-sm text-gray-500 mt-1">左丘明</p></a>
+                <a href="/poem/643666.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">吴许越成</h4><p class="text-sm text-gray-500 mt-1">左丘明</p></a>
+                <a href="/poem/636808.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">国语 · 祭公谏征犬戎</h4><p class="text-sm text-gray-500 mt-1">左丘明</p></a>
+                <a href="/poem/636814.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">国语 ·  邵公谏厉王弭谤</h4><p class="text-sm text-gray-500 mt-1">左丘明</p></a>
+                <a href="/poem/636812.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">国语 ·  襄王不许请隧</h4><p class="text-sm text-gray-500 mt-1">左丘明</p></a>
+                <a href="/poem/636809.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">国语 ·  单子知陈必亡</h4><p class="text-sm text-gray-500 mt-1">左丘明</p></a>
+                <a href="/poem/636810.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">国语 ·  展禽论祀爰居</h4><p class="text-sm text-gray-500 mt-1">左丘明</p></a>
+                <a href="/poem/636811.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">国语 ·  里革断罟匡君</h4><p class="text-sm text-gray-500 mt-1">左丘明</p></a>
+                <a href="/poem/636815.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">国语 ·  敬姜论劳逸</h4><p class="text-sm text-gray-500 mt-1">左丘明</p></a>
+                <a href="/poem/636816.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">国语 ·  叔向贺贫</h4><p class="text-sm text-gray-500 mt-1">左丘明</p></a>
+                <a href="/poem/636817.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">国语 ·  王孙圉论楚宝</h4><p class="text-sm text-gray-500 mt-1">左丘明</p></a>
+                <a href="/poem/636818.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">国语 ·  诸稽郢行成于吴</h4><p class="text-sm text-gray-500 mt-1">左丘明</p></a>
+                <a href="/poem/636819.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">国语 ·  申胥谏许越成</h4><p class="text-sm text-gray-500 mt-1">左丘明</p></a>
+                <a href="/poem/636820.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">公羊传 · 春王正月</h4><p class="text-sm text-gray-500 mt-1">公羊高</p></a>
+                <a href="/poem/633846.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">公羊传  ·  宋人及楚人平</h4><p class="text-sm text-gray-500 mt-1">公羊高</p></a>
+                <a href="/poem/636822.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">公羊传 · 吴子使札来聘</h4><p class="text-sm text-gray-500 mt-1">公羊高</p></a>
+                <a href="/poem/636823.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">穀梁传 · 郑伯克段于鄢</h4><p class="text-sm text-gray-500 mt-1">穀梁子</p></a>
+                <a href="/poem/636844.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">穀梁传 · 虞师晋师灭夏阳</h4><p class="text-sm text-gray-500 mt-1">穀梁子</p></a>
+                <a href="/poem/636845.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">礼记 · 檀弓 · 晋献公杀世子申生</h4><p class="text-sm text-gray-500 mt-1">无名氏</p></a>
+                <a href="/poem/636846.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">礼记 · 檀弓 · 曾子易箦</h4><p class="text-sm text-gray-500 mt-1">无名氏</p></a>
+                <a href="/poem/636847.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">礼记 · 檀弓 · 有子之言似夫子</h4><p class="text-sm text-gray-500 mt-1">无名氏</p></a>
+                <a href="/poem/636848.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">礼记 · 檀弓 · 公子重耳对秦客</h4><p class="text-sm text-gray-500 mt-1">无名氏</p></a>
+                <a href="/poem/636849.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">礼记 · 檀弓 · 杜蒉扬觯</h4><p class="text-sm text-gray-500 mt-1">无名氏</p></a>
+                <a href="/poem/636850.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">礼记 · 檀弓 · 晋献文子成室</h4><p class="text-sm text-gray-500 mt-1">无名氏</p></a>
+                <a href="/poem/12044.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">战国策 · 苏秦以连横说秦</h4><p class="text-sm text-gray-500 mt-1">刘向</p></a>
+                <a href="/poem/636871.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">战国策 · 司马错论伐蜀</h4><p class="text-sm text-gray-500 mt-1">刘向</p></a>
+                <a href="/poem/12046.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">战国策 · 范雎说秦王</h4><p class="text-sm text-gray-500 mt-1">刘向</p></a>
+                <a href="/poem/12047.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">战国策 · 邹忌讽齐王纳谏</h4><p class="text-sm text-gray-500 mt-1">刘向</p></a>
+                <a href="/poem/633854.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">战国策 · 齐宣王见颜斶</h4><p class="text-sm text-gray-500 mt-1">刘向</p></a>
+                <a href="/poem/12048.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">战国策 · 冯谖客孟尝君</h4><p class="text-sm text-gray-500 mt-1">刘向</p></a>
+                <a href="/poem/636873.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">战国策 · 赵威后问齐使</h4><p class="text-sm text-gray-500 mt-1">刘向</p></a>
+                <a href="/poem/635144.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">战国策 · 庄辛论幸臣</h4><p class="text-sm text-gray-500 mt-1">刘向</p></a>
+                <a href="/poem/12049.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">战国策 · 触龙说赵太后</h4><p class="text-sm text-gray-500 mt-1">刘向</p></a>
+                <a href="/poem/636874.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">战国策 · 鲁仲连义不帝秦</h4><p class="text-sm text-gray-500 mt-1">刘向</p></a>
+                <a href="/poem/633841.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">战国策 · 鲁共公择言</h4><p class="text-sm text-gray-500 mt-1">刘向</p></a>
+                <a href="/poem/12061.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">战国策 · 唐雎说信陵君</h4><p class="text-sm text-gray-500 mt-1">刘向</p></a>
+                <a href="/poem/12050.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">战国策 · 唐雎不辱使命</h4><p class="text-sm text-gray-500 mt-1">刘向</p></a>
+                <a href="/poem/12051.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">战国策 · 乐毅报燕王书</h4><p class="text-sm text-gray-500 mt-1">刘向</p></a>
+                <a href="/poem/11887.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">谏逐客书</h4><p class="text-sm text-gray-500 mt-1">李斯</p></a>
+                <a href="/poem/636875.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">卜居</h4><p class="text-sm text-gray-500 mt-1">屈原</p></a>
+                <a href="/poem/633848.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">对楚王问</h4><p class="text-sm text-gray-500 mt-1">宋玉</p></a>
+                <a href="/poem/636927.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">史记 · 七十列传 · 管晏列传</h4><p class="text-sm text-gray-500 mt-1">司马迁</p></a>
+                <a href="/poem/633502.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">史记 · 七十列传 · 游侠列传</h4><p class="text-sm text-gray-500 mt-1">司马迁</p></a>
+                <a href="/poem/636931.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">史记 · 太史公自序</h4><p class="text-sm text-gray-500 mt-1">司马迁</p></a>
+                <a href="/poem/10249.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">报任安书</h4><p class="text-sm text-gray-500 mt-1">司马迁</p></a>
+                <a href="/poem/643603.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">高帝求贤诏</h4><p class="text-sm text-gray-500 mt-1">刘邦</p></a>
+                <a href="/poem/637027.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">文帝议佐百姓诏</h4><p class="text-sm text-gray-500 mt-1">刘恒</p></a>
+                <a href="/poem/637028.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">景帝令二千石修职诏</h4><p class="text-sm text-gray-500 mt-1">刘启</p></a>
+                <a href="/poem/637029.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">武帝求茂才异等诏</h4><p class="text-sm text-gray-500 mt-1">刘彻</p></a>
+                <a href="/poem/11756.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">过秦论</h4><p class="text-sm text-gray-500 mt-1">贾谊</p></a>
+                <a href="/poem/633941.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">治安策</h4><p class="text-sm text-gray-500 mt-1">贾谊</p></a>
+                <a href="/poem/633494.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">论贵粟疏</h4><p class="text-sm text-gray-500 mt-1">晁错</p></a>
+                <a href="/poem/636396.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">狱中上梁王书</h4><p class="text-sm text-gray-500 mt-1">邹阳 </p></a>
+                <a href="/poem/634872.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">上书谏猎</h4><p class="text-sm text-gray-500 mt-1">司马相如</p></a>
+                <a href="/poem/12452.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">答苏武书</h4><p class="text-sm text-gray-500 mt-1">李陵</p></a>
+                <a href="/poem/637032.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">尚德缓刑书</h4><p class="text-sm text-gray-500 mt-1">路温舒 </p></a>
+                <a href="/poem/637033.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">报孙会宗书</h4><p class="text-sm text-gray-500 mt-1">杨恽</p></a>
+                <a href="/poem/637034.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">光武帝临淄劳耿弇</h4><p class="text-sm text-gray-500 mt-1">刘秀</p></a>
+                <a href="/poem/12077.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">诫兄子严、敦书</h4><p class="text-sm text-gray-500 mt-1">马援</p></a>
+                <a href="/poem/10065.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">前出师表</h4><p class="text-sm text-gray-500 mt-1">诸葛亮</p></a>
+                <a href="/poem/10066.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">后出师表</h4><p class="text-sm text-gray-500 mt-1">诸葛亮</p></a>
+                <a href="/poem/11522.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">陈情表</h4><p class="text-sm text-gray-500 mt-1">李密</p></a>
+                <a href="/poem/10093.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">兰亭集序</h4><p class="text-sm text-gray-500 mt-1">王羲之</p></a>
+                <a href="/poem/10277.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">归去来兮辞</h4><p class="text-sm text-gray-500 mt-1">陶渊明</p></a>
+                <a href="/poem/10036.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">桃花源记</h4><p class="text-sm text-gray-500 mt-1">陶渊明</p></a>
+                <a href="/poem/10092.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">五柳先生传</h4><p class="text-sm text-gray-500 mt-1">陶渊明</p></a>
+                <a href="/poem/636072.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">北山移文</h4><p class="text-sm text-gray-500 mt-1">孔稚珪</p></a>
+                <a href="/poem/11760.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">谏太宗十思疏</h4><p class="text-sm text-gray-500 mt-1">魏征</p></a>
+                <a href="/poem/10134.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">为徐敬业讨武曌檄</h4><p class="text-sm text-gray-500 mt-1">骆宾王</p></a>
+                <a href="/poem/10094.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">滕王阁序</h4><p class="text-sm text-gray-500 mt-1">王勃</p></a>
+                <a href="/poem/633475.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">与韩荆州书</h4><p class="text-sm text-gray-500 mt-1">李白</p></a>
+                <a href="/poem/10313.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">春夜宴从弟桃花园序</h4><p class="text-sm text-gray-500 mt-1">李白</p></a>
+                <a href="/poem/634018.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">吊古战场文</h4><p class="text-sm text-gray-500 mt-1">李华</p></a>
+                <a href="/poem/10172.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">陋室铭</h4><p class="text-sm text-gray-500 mt-1">刘禹锡</p></a>
+                <a href="/poem/11272.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">阿房宫赋</h4><p class="text-sm text-gray-500 mt-1">杜牧</p></a>
+                <a href="/poem/634227.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">原道</h4><p class="text-sm text-gray-500 mt-1">韩愈</p></a>
+                <a href="/poem/634843.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">原毁</h4><p class="text-sm text-gray-500 mt-1">韩愈</p></a>
+                <a href="/poem/634702.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">获麟解</h4><p class="text-sm text-gray-500 mt-1">韩愈</p></a>
+                <a href="/poem/12365.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">杂说 · 其一 · 龙说</h4><p class="text-sm text-gray-500 mt-1">韩愈</p></a>
+                <a href="/poem/12368.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">马说</h4><p class="text-sm text-gray-500 mt-1">韩愈</p></a>
+                <a href="/poem/11271.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">师说</h4><p class="text-sm text-gray-500 mt-1">韩愈</p></a>
+                <a href="/poem/11907.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">进学解</h4><p class="text-sm text-gray-500 mt-1">韩愈</p></a>
+                <a href="/poem/634703.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">圬者王承福传</h4><p class="text-sm text-gray-500 mt-1">韩愈</p></a>
+                <a href="/poem/634248.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">讳辩</h4><p class="text-sm text-gray-500 mt-1">韩愈</p></a>
+                <a href="/poem/634704.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">争臣论</h4><p class="text-sm text-gray-500 mt-1">韩愈</p></a>
+                <a href="/poem/634700.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">后十九日复上宰相书</h4><p class="text-sm text-gray-500 mt-1">韩愈</p></a>
+                <a href="/poem/634701.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">后廿九日复上宰相书</h4><p class="text-sm text-gray-500 mt-1">韩愈</p></a>
+                <a href="/poem/634692.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">与于襄阳书</h4><p class="text-sm text-gray-500 mt-1">韩愈</p></a>
+                <a href="/poem/634691.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">与陈给事书</h4><p class="text-sm text-gray-500 mt-1">韩愈</p></a>
+                <a href="/poem/634699.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">应科目时与人书</h4><p class="text-sm text-gray-500 mt-1">韩愈</p></a>
+                <a href="/poem/634247.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">送孟东野序</h4><p class="text-sm text-gray-500 mt-1">韩愈</p></a>
+                <a href="/poem/634114.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">送李愿归盘谷序</h4><p class="text-sm text-gray-500 mt-1">韩愈</p></a>
+                <a href="/poem/634306.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">送董邵南游河北序</h4><p class="text-sm text-gray-500 mt-1">韩愈</p></a>
+                <a href="/poem/634689.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">送杨少尹序</h4><p class="text-sm text-gray-500 mt-1">韩愈</p></a>
+                <a href="/poem/634688.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">送石处士序</h4><p class="text-sm text-gray-500 mt-1">韩愈</p></a>
+                <a href="/poem/634687.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">送温处士赴河阳军序</h4><p class="text-sm text-gray-500 mt-1">韩愈</p></a>
+                <a href="/poem/11731.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">祭十二郎文</h4><p class="text-sm text-gray-500 mt-1">韩愈</p></a>
+                <a href="/poem/634690.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">祭鳄鱼文</h4><p class="text-sm text-gray-500 mt-1">韩愈</p></a>
+                <a href="/poem/634053.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">柳子厚墓志铭</h4><p class="text-sm text-gray-500 mt-1">韩愈</p></a>
+                <a href="/poem/634668.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">驳复仇议</h4><p class="text-sm text-gray-500 mt-1">柳宗元</p></a>
+                <a href="/poem/634732.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">桐叶封弟辨</h4><p class="text-sm text-gray-500 mt-1">柳宗元</p></a>
+                <a href="/poem/634733.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">箕子碑</h4><p class="text-sm text-gray-500 mt-1">柳宗元</p></a>
+                <a href="/poem/11730.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">捕蛇者说</h4><p class="text-sm text-gray-500 mt-1">柳宗元</p></a>
+                <a href="/poem/12461.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">种树郭橐驼传</h4><p class="text-sm text-gray-500 mt-1">柳宗元</p></a>
+                <a href="/poem/12459.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">梓人传</h4><p class="text-sm text-gray-500 mt-1">柳宗元</p></a>
+                <a href="/poem/633997.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">愚溪诗序</h4><p class="text-sm text-gray-500 mt-1">柳宗元</p></a>
+                <a href="/poem/635224.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">永州韦使君新堂记</h4><p class="text-sm text-gray-500 mt-1">柳宗元</p></a>
+                <a href="/poem/634251.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">永州八记 · 其三 · 钴鉧潭西小丘记</h4><p class="text-sm text-gray-500 mt-1">柳宗元</p></a>
+                <a href="/poem/634255.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">永州八记 · 其八 · 小石城山记</h4><p class="text-sm text-gray-500 mt-1">柳宗元</p></a>
+                <a href="/poem/637063.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">贺进士王参元失火书</h4><p class="text-sm text-gray-500 mt-1">柳宗元</p></a>
+                <a href="/poem/634140.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">待漏院记</h4><p class="text-sm text-gray-500 mt-1">王禹偁</p></a>
+                <a href="/poem/633910.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">黄冈竹楼记</h4><p class="text-sm text-gray-500 mt-1">王禹偁</p></a>
+                <a href="/poem/634520.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">洛阳名园记</h4><p class="text-sm text-gray-500 mt-1">李格非</p></a>
+                <a href="/poem/634974.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">严先生祠堂记</h4><p class="text-sm text-gray-500 mt-1">范仲淹</p></a>
+                <a href="/poem/10089.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">岳阳楼记</h4><p class="text-sm text-gray-500 mt-1">范仲淹</p></a>
+                <a href="/poem/635221.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">谏院题名记</h4><p class="text-sm text-gray-500 mt-1">司马光</p></a>
+                <a href="/poem/635223.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">义田记</h4><p class="text-sm text-gray-500 mt-1">钱公辅</p></a>
+                <a href="/poem/637064.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">袁州州学记</h4><p class="text-sm text-gray-500 mt-1">李觏</p></a>
+                <a href="/poem/634935.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">朋党论</h4><p class="text-sm text-gray-500 mt-1">欧阳修</p></a>
+                <a href="/poem/635220.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">纵囚论</h4><p class="text-sm text-gray-500 mt-1">欧阳修</p></a>
+                <a href="/poem/634265.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">释秘演诗集序</h4><p class="text-sm text-gray-500 mt-1">欧阳修</p></a>
+                <a href="/poem/635023.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">梅圣俞诗集序</h4><p class="text-sm text-gray-500 mt-1">欧阳修</p></a>
+                <a href="/poem/634680.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">送杨寘序</h4><p class="text-sm text-gray-500 mt-1">欧阳修</p></a>
+                <a href="/poem/11661.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">新五代史 · 伶官传序</h4><p class="text-sm text-gray-500 mt-1">欧阳修</p></a>
+                <a href="/poem/635225.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">新五代史 · 宦者传论</h4><p class="text-sm text-gray-500 mt-1">欧阳修</p></a>
+                <a href="/poem/11953.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">相州昼锦堂记</h4><p class="text-sm text-gray-500 mt-1">欧阳修</p></a>
+                <a href="/poem/633637.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">丰乐亭记</h4><p class="text-sm text-gray-500 mt-1">欧阳修</p></a>
+                <a href="/poem/10088.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">醉翁亭记</h4><p class="text-sm text-gray-500 mt-1">欧阳修</p></a>
+                <a href="/poem/11190.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">秋声赋</h4><p class="text-sm text-gray-500 mt-1">欧阳修</p></a>
+                <a href="/poem/634670.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">祭石曼卿文</h4><p class="text-sm text-gray-500 mt-1">欧阳修</p></a>
+                <a href="/poem/633473.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">泷冈阡表</h4><p class="text-sm text-gray-500 mt-1">欧阳修</p></a>
+                <a href="/poem/11729.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">管仲论</h4><p class="text-sm text-gray-500 mt-1">苏洵</p></a>
+                <a href="/poem/12058.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">辨奸论</h4><p class="text-sm text-gray-500 mt-1">苏洵</p></a>
+                <a href="/poem/11728.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">心术</h4><p class="text-sm text-gray-500 mt-1">苏洵</p></a>
+                <a href="/poem/634976.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">张益州画像记</h4><p class="text-sm text-gray-500 mt-1">苏洵</p></a>
+                <a href="/poem/633771.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">刑赏忠厚之至论</h4><p class="text-sm text-gray-500 mt-1">苏轼</p></a>
+                <a href="/poem/12053.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">范增论</h4><p class="text-sm text-gray-500 mt-1">苏轼</p></a>
+                <a href="/poem/11912.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">留侯论</h4><p class="text-sm text-gray-500 mt-1">苏轼</p></a>
+                <a href="/poem/12054.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">贾谊论</h4><p class="text-sm text-gray-500 mt-1">苏轼</p></a>
+                <a href="/poem/12055.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">晁错论</h4><p class="text-sm text-gray-500 mt-1">苏轼</p></a>
+                <a href="/poem/633790.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">上梅直讲书</h4><p class="text-sm text-gray-500 mt-1">苏轼</p></a>
+                <a href="/poem/11868.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">喜雨亭记</h4><p class="text-sm text-gray-500 mt-1">苏轼</p></a>
+                <a href="/poem/633782.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">凌虚台记</h4><p class="text-sm text-gray-500 mt-1">苏轼</p></a>
+                <a href="/poem/633777.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">超然台记</h4><p class="text-sm text-gray-500 mt-1">苏轼</p></a>
+                <a href="/poem/633783.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">放鹤亭记</h4><p class="text-sm text-gray-500 mt-1">苏轼</p></a>
+                <a href="/poem/10333.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">石钟山记</h4><p class="text-sm text-gray-500 mt-1">苏轼</p></a>
+                <a href="/poem/633775.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">潮州韩文公庙碑</h4><p class="text-sm text-gray-500 mt-1">苏轼</p></a>
+                <a href="/poem/637069.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">乞校正陆贽奏议进御札子</h4><p class="text-sm text-gray-500 mt-1">苏轼</p></a>
+                <a href="/poem/640908.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">前赤壁赋</h4><p class="text-sm text-gray-500 mt-1">苏轼</p></a>
+                <a href="/poem/11697.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">后赤壁赋</h4><p class="text-sm text-gray-500 mt-1">苏轼</p></a>
+                <a href="/poem/634648.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">三槐堂铭</h4><p class="text-sm text-gray-500 mt-1">苏轼</p></a>
+                <a href="/poem/633784.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">方山子传</h4><p class="text-sm text-gray-500 mt-1">苏轼</p></a>
+                <a href="/poem/633642.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">六国论</h4><p class="text-sm text-gray-500 mt-1">苏辙</p></a>
+                <a href="/poem/11733.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">上枢密韩太尉书</h4><p class="text-sm text-gray-500 mt-1">苏辙</p></a>
+                <a href="/poem/11666.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">黄州快哉亭记</h4><p class="text-sm text-gray-500 mt-1">苏辙</p></a>
+                <a href="/poem/634337.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">寄欧阳舍人书</h4><p class="text-sm text-gray-500 mt-1">曾巩</p></a>
+                <a href="/poem/634336.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">赠黎安二生序</h4><p class="text-sm text-gray-500 mt-1">曾巩</p></a>
+                <a href="/poem/633931.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">读《孟尝君传》</h4><p class="text-sm text-gray-500 mt-1">王安石</p></a>
+                <a href="/poem/634139.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">同学一首别子固</h4><p class="text-sm text-gray-500 mt-1">王安石</p></a>
+                <a href="/poem/11361.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">游褒禅山记</h4><p class="text-sm text-gray-500 mt-1">王安石</p></a>
+                <a href="/poem/635237.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">泰州海宁县主簿许君墓志铭</h4><p class="text-sm text-gray-500 mt-1">王安石</p></a>
+                <a href="/poem/637070.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">送天台陈庭学序</h4><p class="text-sm text-gray-500 mt-1">宋濂</p></a>
+                <a href="/poem/634043.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">阅江楼记</h4><p class="text-sm text-gray-500 mt-1">宋濂</p></a>
+                <a href="/poem/637072.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">司马季主论卜</h4><p class="text-sm text-gray-500 mt-1">刘基</p></a>
+                <a href="/poem/634041.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">卖柑者言</h4><p class="text-sm text-gray-500 mt-1">刘基</p></a>
+                <a href="/poem/633495.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">深虑论</h4><p class="text-sm text-gray-500 mt-1">方孝孺</p></a>
+                <a href="/poem/635071.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">豫让论</h4><p class="text-sm text-gray-500 mt-1">方孝孺</p></a>
+                <a href="/poem/636239.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">亲政篇</h4><p class="text-sm text-gray-500 mt-1">王鏊</p></a>
+                <a href="/poem/634318.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">尊经阁记</h4><p class="text-sm text-gray-500 mt-1">王守仁</p></a>
+                <a href="/poem/634317.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">象祠记</h4><p class="text-sm text-gray-500 mt-1">王守仁</p></a>
+                <a href="/poem/633492.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">瘗旅文</h4><p class="text-sm text-gray-500 mt-1">王守仁</p></a>
+                <a href="/poem/637073.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">信陵君救赵论</h4><p class="text-sm text-gray-500 mt-1">唐顺之</p></a>
+                <a href="/poem/637074.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">报刘一丈书</h4><p class="text-sm text-gray-500 mt-1">宗臣</p></a>
+                <a href="/poem/11657.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">吴山图记</h4><p class="text-sm text-gray-500 mt-1">归有光</p></a>
+                <a href="/poem/635238.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">沧浪亭记</h4><p class="text-sm text-gray-500 mt-1">归有光</p></a>
+                <a href="/poem/637075.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">青霞先生文集序</h4><p class="text-sm text-gray-500 mt-1">茅坤</p></a>
+                <a href="/poem/633934.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">蔺相如完璧归赵论</h4><p class="text-sm text-gray-500 mt-1">王世贞</p></a>
+                <a href="/poem/634526.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">徐文长传</h4><p class="text-sm text-gray-500 mt-1">袁宏道</p></a>
+                <a href="/poem/633988.html" class="poem-card block p-4 rounded-lg text-center"><h4 class="text-xl font-serif-sc font-semibold text-gray-800">五人墓碑记</h4><p class="text-sm text-gray-500 mt-1">张溥</p></a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="hidden fixed bottom-8 right-8 bg-indigo-500 hover:bg-indigo-600 text-white p-3 rounded-full shadow-lg transition-opacity duration-300">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"/></svg>
+    </button>
+
+    <!-- Footer (Consistent with Homepage) -->
+    <footer class="bg-gray-800 text-white mt-16">
+        <div class="container mx-auto px-6 py-8 text-center">
+            <div class="text-2xl font-bold font-serif-sc">星雨古诗文</div>
+            <div class="flex justify-center space-x-6 my-4">
+                <a href="/about.html" class="text-gray-400 hover:text-white">关于我们</a>
+                <a href="/contact.html" class="text-gray-400 hover:text-white">联系合作</a>
+                <a href="/privacy.html" class="text-gray-400 hover:text-white">隐私政策</a>
+                <a href="/terms.html" class="text-gray-400 hover:text-white">服务条款</a>
+            </div>
+            <p class="text-gray-500 text-sm">&copy; 2025 星雨古诗文. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Back to top button
+        const backToTopButton = document.getElementById('back-to-top');
+        window.onscroll = function() {
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                backToTopButton.classList.remove('hidden');
+            } else {
+                backToTopButton.classList.add('hidden');
+            }
+        };
+        backToTopButton.addEventListener('click', function() {
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        });
+    </script>
+</body>
+</html>
