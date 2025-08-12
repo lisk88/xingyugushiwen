@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>星雨古诗文 - 发现中华古典之美</title>
+    <meta name="description" content="星雨古诗文致力于提供一个简洁、优雅的平台，让您轻松地搜索、阅读和欣赏中华古典诗词、名句和作者，特别为中小学生提供学习专区。">
+    <meta name="keywords" content="古诗文, 中小学古诗, 唐诗三百首, 宋词三百首, 古文观止, 星雨古诗文, 诗词, 文言文, 唐诗, 宋词">
+    
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts for elegant typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Custom styles to enhance Tailwind */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fdfdfd; /* Slightly brighter background */
+            color: #333;
+        }
+        /* Using Noto Serif SC for headings and special text for a classic feel */
+        h1, h2, h3, h4, .font-serif-sc {
+            font-family: 'Noto Serif SC', serif;
+        }
+        .hero-section {
+            background-image: url('https://images.unsplash.com/photo-1542693593-843d11944809?q=80&w=2670&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+        }
+        .card-hover {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header Navigation -->
+    <header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-gray-200">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-3xl font-bold font-serif-sc text-gray-900">星雨古诗文</a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#" class="text-gray-600 hover:text-gray-900 transition-colors">诗文</a>
+                <a href="#" class="text-gray-600 hover:text-gray-900 transition-colors">作者</a>
+                <a href="#" class="text-gray-600 hover:text-gray-900 transition-colors">名句</a>
+                <a href="#" class="text-gray-600 hover:text-gray-900 transition-colors">专题</a>
+            </div>
+            <div class="md:hidden">
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="text-gray-800 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+            <a href="#" class="block py-2 text-gray-600 hover:text-gray-900">诗文</a>
+            <a href="#" class="block py-2 text-gray-600 hover:text-gray-900">作者</a>
+            <a href="#" class="block py-2 text-gray-600 hover:text-gray-900">名句</a>
+            <a href="#" class="block py-2 text-gray-600 hover:text-gray-900">专题</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section h-auto py-20 flex flex-col justify-center items-center text-white relative">
+            <div class="absolute inset-0 bg-black/50"></div>
+            <div class="relative z-10 text-center px-4 container mx-auto">
+                
+                <!-- Poem of the Day moved here -->
+                <div class="mb-12 pt-12">
+                     <div class="max-w-3xl mx-auto">
+                        <p class="font-serif-sc text-2xl md:text-3xl leading-relaxed text-white mb-4">
+                            人生到处知何似，应似飞鸿踏雪泥。
+                        </p>
+                        <p class="text-gray-200">— 苏轼《和子由渑池怀旧》</p>
+                    </div>
+                </div>
+
+                <!-- Search Bar -->
+                <div class="w-full max-w-2xl mx-auto">
+                    <form class="relative">
+                        <input type="search" placeholder="搜索诗文、作者、名句" class="w-full py-4 px-6 rounded-full bg-white/90 text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-red-400 transition-shadow shadow-lg">
+                        <button type="submit" class="absolute right-2 top-1/2 -translate-y-1/2 bg-red-600 hover:bg-red-700 text-white rounded-full p-3 transition-colors">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Student Section -->
+        <section class="py-16 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-gray-900">中小学专区</h2>
+                    <p class="text-gray-600 mt-2">为学生量身打造的古诗文学习乐园</p>
+                </div>
+
+                <!-- By Grade Level -->
+                <div class="mb-12">
+                    <h3 class="text-2xl font-semibold text-center mb-8 font-serif-sc">按学段浏览</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <a href="primary.html" class="card-hover block p-8 bg-white rounded-lg shadow-md border border-gray-200 text-center">
+                            <h4 class="text-2xl font-bold font-serif-sc text-green-600 mb-2">小学</h4>
+                            <p class="text-gray-500">启蒙乐园，感受音韵之美</p>
+                        </a>
+                        <a href="junior.html" class="card-hover block p-8 bg-white rounded-lg shadow-md border border-gray-200 text-center">
+                            <h4 class="text-2xl font-bold font-serif-sc text-blue-600 mb-2">初中</h4>
+                            <p class="text-gray-500">衔接经典，拓展文言视野</p>
+                        </a>
+                        <a href="senior.html" class="card-hover block p-8 bg-white rounded-lg shadow-md border border-gray-200 text-center">
+                            <h4 class="text-2xl font-bold font-serif-sc text-purple-600 mb-2">高中</h4>
+                            <p class="text-gray-500">深入赏析，体悟思想内涵</p>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- By Classic Collections -->
+                <div>
+                    <h3 class="text-2xl font-semibold text-center mb-8 font-serif-sc">经典选本</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <a href="#" class="card-hover block p-8 bg-white rounded-lg shadow-md border border-gray-200 text-center">
+                            <h4 class="text-2xl font-bold font-serif-sc text-red-600 mb-2">唐诗三百首</h4>
+                            <p class="text-gray-500">熟读唐诗三百首，不会作诗也会吟</p>
+                        </a>
+                        <a href="#" class="card-hover block p-8 bg-white rounded-lg shadow-md border border-gray-200 text-center">
+                            <h4 class="text-2xl font-bold font-serif-sc text-yellow-600 mb-2">宋词三百首</h4>
+                            <p class="text-gray-500">感受婉约与豪放的词之魅力</p>
+                        </a>
+                        <a href="#" class="card-hover block p-8 bg-white rounded-lg shadow-md border border-gray-200 text-center">
+                            <h4 class="text-2xl font-bold font-serif-sc text-indigo-600 mb-2">古文观止</h4>
+                            <p class="text-gray-500">历代散文精华，提升古文功底</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Authors Section -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="mb-16">
+                    <h2 class="text-3xl font-bold text-center mb-8">文坛巨匠</h2>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                        <div class="card-hover bg-white rounded-lg shadow-md overflow-hidden border border-gray-200">
+                            <div class="p-6">
+                                <h3 class="text-2xl font-serif-sc font-bold mb-2">李白</h3>
+                                <p class="text-gray-600 mb-4 h-12">笔落惊风雨，诗成泣鬼神。豪放飘逸，号“诗仙”。</p>
+                                <a href="#" class="text-red-600 hover:text-red-800 font-semibold">了解更多 &rarr;</a>
+                            </div>
+                        </div>
+                        <div class="card-hover bg-white rounded-lg shadow-md overflow-hidden border border-gray-200">
+                            <div class="p-6">
+                                <h3 class="text-2xl font-serif-sc font-bold mb-2">杜甫</h3>
+                                <p class="text-gray-600 mb-4 h-12">沉郁顿挫，笔力雄浑。其诗被称为“诗史”，世称“诗圣”。</p>
+                                <a href="#" class="text-red-600 hover:text-red-800 font-semibold">了解更多 &rarr;</a>
+                            </div>
+                        </div>
+                        <div class="card-hover bg-white rounded-lg shadow-md overflow-hidden border border-gray-200">
+                            <div class="p-6">
+                                <h3 class="text-2xl font-serif-sc font-bold mb-2">苏轼</h3>
+                                <p class="text-gray-600 mb-4 h-12">文、诗、词、书、画无一不精，旷达乐观，才华横溢。</p>
+                                <a href="#" class="text-red-600 hover:text-red-800 font-semibold">了解更多 &rarr;</a>
+                            </div>
+                        </div>
+                        <div class="card-hover bg-white rounded-lg shadow-md overflow-hidden border border-gray-200">
+                            <div class="p-6">
+                                <h3 class="text-2xl font-serif-sc font-bold mb-2">李清照</h3>
+                                <p class="text-gray-600 mb-4 h-12">婉约词派代表，才情兼备，对诗词散文皆有成就。</p>
+                                <a href="#" class="text-red-600 hover:text-red-800 font-semibold">了解更多 &rarr;</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white">
+        <div class="container mx-auto px-6 py-8 text-center">
+            <a href="#" class="text-2xl font-bold font-serif-sc">星雨古诗文</a>
+            <div class="flex justify-center space-x-6 my-4">
+                <a href="#" class="text-gray-400 hover:text-white">关于我们</a>
+                <a href="#" class="text-gray-400 hover:text-white">联系合作</a>
+                <a href="#" class="text-gray-400 hover:text-white">隐私政策</a>
+                <a href="#" class="text-gray-400 hover:text-white">服务条款</a>
+            </div>
+            <p class="text-gray-500 text-sm">&copy; 2025 星雨古诗文. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript for mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
